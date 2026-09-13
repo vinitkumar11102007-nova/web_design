@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="right-frame">
+    <h2>Registration Page</h2>
+    <form class="form-box" action="#" method="post">
+
+      <div class="form-row">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+      </div>
+
+      <div class="form-row">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+      </div>
+
+      <div class="form-row">
+        <label for="email">E-mail ID:</label>
+        <input type="text" id="email" name="email">
+      </div>
+
+      <div class="form-row">
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone">
+      </div>
+
+      <div class="form-row">
+        <label>Sex:</label>
+        <span class="radio-group">
+          <input type="radio" id="male" name="sex" value="Male">
+          <label for="male" style="width:auto; font-weight:normal;">Male</label>
+          <input type="radio" id="female" name="sex" value="Female">
+          <label for="female" style="width:auto; font-weight:normal;">Female</label>
+          <input type="radio" id="other" name="sex" value="Other">
+          <label for="other" style="width:auto; font-weight:normal;">Other</label>
+        </span>
+      </div>
+
+      <div class="form-row">
+        <label>Date of Birth:</label>
+        <select id="dobDay" name="dobDay">
+          <option value="">Day</option>
+          <!-- 1 to 31 -->
+          <script>
+            for (let d = 1; d <= 31; d++) {
+              document.write('<option value="' + d + '">' + d + '</option>');
+            }
+          </script>
+        </select>
+        <select id="dobMonth" name="dobMonth">
+          <option value="">Month</option>
+          <option>January</option><option>February</option><option>March</option>
+          <option>April</option><option>May</option><option>June</option>
+          <option>July</option><option>August</option><option>September</option>
+          <option>October</option><option>November</option><option>December</option>
+        </select>
+        <select id="dobYear" name="dobYear">
+          <option value="">Year</option>
+          <script>
+            for (let y = 2015; y >= 1970; y--) {
+              document.write('<option value="' + y + '">' + y + '</option>');
+            }
+          </script>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label>Languages known:</label>
+        <span class="checkbox-group">
+          <input type="checkbox" id="langEnglish" name="languages" value="English">
+          <label for="langEnglish" style="width:auto; font-weight:normal;">English</label>
+          <input type="checkbox" id="langTelugu" name="languages" value="Telugu">
+          <label for="langTelugu" style="width:auto; font-weight:normal;">Telugu</label>
+          <input type="checkbox" id="langHindi" name="languages" value="Hindi">
+          <label for="langHindi" style="width:auto; font-weight:normal;">Hindi</label>
+          <input type="checkbox" id="langTamil" name="languages" value="Tamil">
+          <label for="langTamil" style="width:auto; font-weight:normal;">Tamil</label>
+        </span>
+      </div>
+
+      <div class="form-row">
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="4"></textarea>
+      </div>
+
+      <div class="btn-row">
+        <button type="submit" class="btn">Submit</button>
+        <button type="reset" class="btn reset">Reset</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
